@@ -9,7 +9,7 @@ body{
     height: 100vh;
 }
 
-.cards{
+.game{
     margin: auto;
     width: 700px;
     height: 700px;
@@ -21,23 +21,40 @@ body{
     width: calc(25% - 10px);
     height: calc(33% - 10px);
     position: relative;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     border: 1px solid black;
     margin: 5px;
     border-radius: 10px;
+    perspective: 1000px;
+
+   
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
+
+.card.flipped {
+    transform: rotateY(180deg);
+  }
 
 .back, .front{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     position: absolute;
-    backface-visibility: hidden
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .back{
     background-color: azure;
+
 }
+
+.front {
+    transform: rotateY(180deg);
+}
+
 
 /* 
 .side-bar{
