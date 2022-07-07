@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: aqua;
+    height: 100vh;
+}
+
+.cards{
+    margin: auto;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: calc(25% - 10px);
+    height: calc(33% - 10px);
+    position: relative;
+    background-color: blueviolet;
+    border: 1px solid black;
+    margin: 5px;
+}
+/* 
+.side-bar{
+
+} */
