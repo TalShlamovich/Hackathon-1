@@ -24,7 +24,21 @@ body{
     background-color: blueviolet;
     border: 1px solid black;
     margin: 5px;
+    border-radius: 10px;
 }
+
+.back, .front{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden
+}
+
+.back{
+    background-color: azure;
+}
+
 /* 
 .side-bar{
 
