@@ -37,6 +37,11 @@ body{
     transform: rotateY(180deg);
   }
 
+.card.matched {
+    transform: rotateY(180deg);
+}
+
+
 .back, .front{
     width: 100%;
     height: 100%;
@@ -56,7 +61,14 @@ body{
 }
 
 
-/* 
+
 .side-bar{
 
-} */
+}
+
+#start{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+
+}
