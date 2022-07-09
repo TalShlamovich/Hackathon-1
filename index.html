@@ -76,8 +76,15 @@
         <!-- <audio controls autoplay loop>
              <source id="tetris" src="tetris.mp3">
              <embed src="tetris.mp3" autoplay = 'autoplay'>
-        </audio> -->
-        <embed src="tetris.mp3" loop="true" autostart="true" width="2" height="0">
+        </audio>
+        <embed src="tetris.mp3" loop="true" autostart="true" width="2" height="0"> -->
+
+            <audio id="tetris" src="tetris.mp3"></audio>
+            <div>
+                <button onclick="document.getElementById('tetris').play()">Play</button>
+                <button onclick="document.getElementById('tetris').pause()">Pause</button>
+                <button onclick="document.getElementById('tetris').muted=!document.getElementById('tetris').muted">Mute/ Unmute</button>
+            </div>
 
     <script src="script.js"></script>
 </body>
