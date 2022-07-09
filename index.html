@@ -62,11 +62,22 @@
 
 
         <div class="side-bar">
-            <div class="score"></div>
+            
+            <p id="score-word">Score: <span id="score"></span></p>
+            
+            
             <button id="start">restart</button>
         </div>
 
 
+        <audio id="mySound" src="audio.mp3"></audio>
+
+
+        <!-- <audio controls autoplay loop>
+             <source id="tetris" src="tetris.mp3">
+             <embed src="tetris.mp3" autoplay = 'autoplay'>
+        </audio> -->
+        <embed src="tetris.mp3" loop="true" autostart="true" width="2" height="0">
 
     <script src="script.js"></script>
 </body>

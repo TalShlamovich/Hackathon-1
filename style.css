@@ -5,7 +5,7 @@
 }
 body{
     display: flex;
-    background-color: aqua;
+    background-color: rgb(184, 184, 184);
     height: 100vh;
 }
 
@@ -63,12 +63,25 @@ body{
 
 
 .side-bar{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: auto;
 }
 
 #start{
+    position: absolute;
     padding: 15px;
     font-size: 20px;
     border-radius: 10px;
-
+    /* margin: auto; */
 }
+
+
+#score-word{
+    position: absolute;
+    top: 300px;
+    
+}
+
+
