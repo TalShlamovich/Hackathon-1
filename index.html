@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,85 +8,79 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
 
+<body>
+    <div class="everything">
         <div class="game">
             <div class="card one">
                 <img src="img/alon.jpg" class="front">
                 <img src="img/icon.png" class="back">
             </div>
             <div class="card one">
-            <img src="img/alon.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/alon.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card two">
-            <img src="img/david.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/david.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card two">
-            <img src="img/david.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/david.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card three">
-            <img src="img/elie.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/elie.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card three">
-            <img src="img/backtick.JPG" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/backtick.JPG" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card four">
-            <img src="img/laura.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/laura.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card four">
-            <img src="img/laura.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/laura.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card five">
-            <img src="img/roy.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/roy.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card five">
-            <img src="img/roy.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/roy.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card six">
-            <img src="img/juliana.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/juliana.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
             <div class="card six">
-            <img src="img/juliana.jpg" class="front">
-            <img src="img/icon.png" class="back">
-        </div>
+                <img src="img/juliana.jpg" class="front">
+                <img src="img/icon.png" class="back">
+            </div>
         </div>
 
 
-        <div class="side-bar">
-            
+        <div id="side-bar">
+            <audio id="tetris" src="tetris.mp3"></audio>
+            <div id="controls">
+                <button onclick="document.getElementById('tetris').play()">Play</button>
+                <button onclick="document.getElementById('tetris').pause()">Pause</button>
+                <button onclick="document.getElementById('tetris').muted=!document.getElementById('tetris').muted">Mute/
+                    Unmute</button>
+            </div>
+            <div id="blink"></div>
             <p id="score-word">Score: <span id="score"></span></p>
-            
-            
             <button id="start">restart</button>
         </div>
 
 
         <audio id="mySound" src="audio.mp3"></audio>
 
-
-        <!-- <audio controls autoplay loop>
-             <source id="tetris" src="tetris.mp3">
-             <embed src="tetris.mp3" autoplay = 'autoplay'>
-        </audio>
-        <embed src="tetris.mp3" loop="true" autostart="true" width="2" height="0"> -->
-
-            <audio id="tetris" src="tetris.mp3"></audio>
-            <div>
-                <button onclick="document.getElementById('tetris').play()">Play</button>
-                <button onclick="document.getElementById('tetris').pause()">Pause</button>
-                <button onclick="document.getElementById('tetris').muted=!document.getElementById('tetris').muted">Mute/ Unmute</button>
-            </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+    </div>
 </body>
+
 </html>
