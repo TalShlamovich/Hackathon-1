@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 /* set up margins and flex to fit all elements */
-body{
+.everything{
     display: flex;
     background-color: rgb(184, 184, 184);
     height: 100vh;
@@ -63,17 +63,17 @@ body{
 
 
 
-.side-bar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-right: auto;
+#side-bar{
+    width:200px;
+    height: 700px;
+
+
 }
 
 #blink {
     position: absolute;
-    top: 250px;
-    font-size: 20px;
+    top: 275px;
+    font-size: 24px;
 }
 
 #start{
@@ -81,14 +81,21 @@ body{
     padding: 15px;
     font-size: 20px;
     border-radius: 10px;
-    /* margin: auto; */
+    top: 350px;
 }
 
 
 #score-word{
     position: absolute;
     top: 300px;
+    text-align: center;
+    font-size: 20px;
     
 }
 
+
+#controls {
+    position: absolute;
+    top: 10px;
+}
 

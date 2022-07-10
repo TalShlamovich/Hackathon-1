@@ -1,17 +1,16 @@
 var game = document.querySelector('cards'); //the game itself (cards)
 var cards = document.querySelectorAll('.card'); //collection of cards
-var index = 0; //variable used to compare only two currently active cards
 var card1; // active card 1
 var card2;// active card 2
 var flipped = document.getElementsByClassName('flipped'); //class used to mark flipped cards
 var unflipTimeout; //used to slightly delay unflipping 
 var restartTimeout; //used to let cards unflip before shuffling
 var scoreTimeout; //used to make score appear with a slight delay
-var sum = 700;// this and var a are used to calculate score. the first match is worth 700 pts, then 600 and so on
-var a = 0;
+var initialSum = 700;// this and var a are used to calculate score. the first match is worth 700 pts, then 600 and so on
+var sum = 0;
 var clap = 0; //used to make clapping sound when player found all pairs
 
-//mix the cards
+//mix the cards. adding event listener to cards
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 function mix() {
@@ -37,8 +36,8 @@ function flip() {
 //compare two flipped cards
 
 function compare() {
-    card1 = flipped[index];
-    card2 = flipped[index + 1];
+    card1 = flipped[0];
+    card2 = flipped[1];
 
     //if matched then keep them flipped, change the class to matched and call disable cards function
     if (card1.className.split(" ")[1] === card2.className.split(" ")[1]) {
@@ -72,8 +71,8 @@ function compare() {
 
 //add score
 function score() {
-    a += sum
-    document.querySelector("#score").innerText = a;
+    sum += initialSum
+    document.querySelector("#score").innerText = sum;
     
 }
 
@@ -82,15 +81,15 @@ function blinkingScore() {
     let blinkScore = document.getElementById('blink')
     blinkScore.style.visibility = 'hidden'
     var blinkInterval = setInterval(function () {
-        console.log(sum);
-        blinkScore.innerText = '+ ' + sum
+        
+        blinkScore.innerText = '+ ' + initialSum
         blinkScore.style.visibility = (blinkScore.style.visibility == 'hidden' ? '' : 'hidden')
         if (timesRun === 5) {
             clearInterval(blinkInterval)
         }
         timesRun++
     }, 400)
-    sum -= 100
+    initialSum -= 100
 }
 
 //unflip the cards whn they do not match (remove flipped class)
@@ -119,8 +118,9 @@ function restartFun() {
         cards[i].classList.remove('matched');
         cards[i].classList.remove('flipped');
         document.querySelector("#score").innerText = 0;
-        a = 0;
-        sum = 700;
+        clap =0;
+        sum = 0;
+        initialSum = 700;
     }
     restartTimeout = setTimeout(mix, 1000);
 }
