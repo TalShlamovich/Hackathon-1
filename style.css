@@ -70,6 +70,12 @@ body{
     margin-right: auto;
 }
 
+#blink {
+    position: absolute;
+    top: 250px;
+    font-size: 20px;
+}
+
 #start{
     position: absolute;
     padding: 15px;
